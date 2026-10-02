@@ -1,4 +1,3 @@
-// src/components/Card3D.tsx
 import React, { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useTexture } from '@react-three/drei';

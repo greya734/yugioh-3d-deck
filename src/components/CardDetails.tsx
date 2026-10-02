@@ -1,4 +1,3 @@
-// src/components/CardDetails.tsx
 import React, { CSSProperties } from 'react';
 import type { YugiohCard } from '../types/card';
 
