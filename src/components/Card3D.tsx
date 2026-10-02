@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useTexture } from '@react-three/drei';
 import * as THREE from 'three';
-import { YugiohCard } from '../types/card';
+import type { YugiohCard } from '../types/card';
 
 interface Card3DProps {
   card: YugiohCard;

@@ -1,6 +1,6 @@
 // src/components/CardDetails.tsx
 import React, { CSSProperties } from 'react';
-import { YugiohCard } from '../types/card';
+import type { YugiohCard } from '../types/card';
 
 interface CardDetailsProps {
   card: YugiohCard | null;

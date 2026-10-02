@@ -1,4 +1,4 @@
-import { YugiohCard } from '../types/card';
+import type { YugiohCard } from '../types/card';
 
 export async function fetchRandomCards(count: number = 5): Promise<YugiohCard[]> {
   try {
@@ -6,7 +6,6 @@ export async function fetchRandomCards(count: number = 5): Promise<YugiohCard[]>
     const response = await fetch(`https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=${offset}`);
     const data = await response.json();
     
-    // Mélanger et piocher le nombre demandé
     const shuffled: YugiohCard[] = data.data.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
   } catch (error) {

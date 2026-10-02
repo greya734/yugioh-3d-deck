@@ -2,7 +2,7 @@ import React, { useState, useEffect, Suspense, CSSProperties } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Center } from '@react-three/drei';
 import { fetchRandomCards } from './services/yugiohApi';
-import { YugiohCard } from './types/card';
+import type { YugiohCard } from './types/card';
 import Card3D from './components/Card3D';
 import CardDetails from './components/CardDetails';
 
