@@ -1,4 +1,5 @@
-import React, { useState, useEffect, Suspense, CSSProperties } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import type { CSSProperties } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Center } from '@react-three/drei';
 import { fetchRandomCards } from './services/yugiohApi';
