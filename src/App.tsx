@@ -1,11 +1,12 @@
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import type { CSSProperties } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Center } from '@react-three/drei';
 import { fetchRandomCards } from './services/yugiohApi';
 import type { YugiohCard } from './types/card';
-import Card3D from './components/Card3D';
 import CardDetails from './components/CardDetails';
+
+const Card3D = lazy(() => import('./components/Card3D'))
 
 export default function App() {
   const [cards, setCards] = useState<YugiohCard[]>([]);
@@ -45,7 +46,7 @@ export default function App() {
         <directionalLight position={[5, 10, 5]} intensity={1.5} />
         <pointLight position={[-5, -5, -5]} intensity={0.5} />
 
-        <Suspense fallback={null}>
+        <Suspense fallback={<div>Chargement…</div>}>
           <Center>
             <group>
               {cards.map((card, index) => {
