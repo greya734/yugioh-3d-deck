@@ -5,6 +5,7 @@ import { OrbitControls, Center } from '@react-three/drei';
 import { fetchRandomCards } from './services/yugiohApi';
 import type { YugiohCard } from './types/card';
 import CardDetails from './components/CardDetails';
+import { Html } from '@react-three/drei'
 
 const Card3D = lazy(() => import('./components/Card3D'))
 
@@ -46,7 +47,7 @@ export default function App() {
         <directionalLight position={[5, 10, 5]} intensity={1.5} />
         <pointLight position={[-5, -5, -5]} intensity={0.5} />
 
-        <Suspense fallback={<div>Chargement…</div>}>
+        <Suspense fallback={<Html center>Chargement…</Html>}>
           <Center>
             <group>
               {cards.map((card, index) => {
