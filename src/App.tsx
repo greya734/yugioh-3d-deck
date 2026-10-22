@@ -12,7 +12,7 @@ import SceneLighting from './scene/SceneLighting';
 const Card3D = lazy(() => import('./components/Card3D'))
 
 // --- Disposition de la scène -------------------------------------------------
-// Le modèle exporté depuis Blender mesure ~9,6 u de large (bras en V, moyeu à l'arrière).
+// Le modèle exporté depuis Blender
 const DISK_SCALE = 1.55;
 const DISK_POSITION: [number, number, number] = [0.2, 0, -0.25];
 // Pente des bras du plateau (22°) : les cartes suivent le V du Duel Disk.
