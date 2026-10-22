@@ -12,7 +12,7 @@ interface SceneLightingProps {
 export default function SceneLighting({ groundY = -1.9 }: SceneLightingProps) {
   return (
     <>
-      {/* Reflets : boîtes à lumière autour de la scène (utile pour les métaux et les cartes brillantes) */}
+      {/* Reflets : boîtes à lumière autour de la scène */}
       <Environment resolution={256} environmentIntensity={0.9}>
         <color attach="background" args={['#05060a']} />
         <Lightformer form="rect" intensity={3.2} color="#fff1dc" position={[0, 9, 6]} scale={[16, 4, 1]} />
@@ -25,7 +25,7 @@ export default function SceneLighting({ groundY = -1.9 }: SceneLightingProps) {
       {/* Lumière d'ambiance douce, ciel froid / sol chaud */}
       <hemisphereLight args={['#c3d3ff', '#1b1511', 0.35]} />
 
-      {/* Lumière principale : seule à projeter des ombres nettes (cartes -> plateau) */}
+      {/* Lumière principale */}
       <directionalLight
         castShadow
         position={[7, 14, 9]}
@@ -42,7 +42,7 @@ export default function SceneLighting({ groundY = -1.9 }: SceneLightingProps) {
         shadow-normalBias={0.04}
       />
 
-      {/* Contre-jour bleuté : détache les bords du plateau et de l'anneau du fond */}
+      {/* Contre-jour bleuté */}
       <spotLight position={[-10, 9, -12]} angle={0.55} penumbra={1} intensity={900} decay={2} color="#7fa2ff" />
       {/* Contre-jour chaud de l'autre côté */}
       <spotLight position={[12, 7, -10]} angle={0.5} penumbra={1} intensity={500} decay={2} color="#ffb072" />
