@@ -19,7 +19,7 @@ const DISK_POSITION: [number, number, number] = [0.2, 0, -0.25];
 const ARM_SLOPE = Math.tan((22 * Math.PI) / 180);
 const CARD_SPACING = 3.0;
 const CARD_HEIGHT = 5.4;
-// Le point le plus bas du modèle (bracelet) est à -1,11 u avant mise à l'échelle.
+// Le point le plus bas du modèle (bracelet)
 const GROUND_Y = -1.11 * DISK_SCALE - 0.1;
 
 export default function App() {
